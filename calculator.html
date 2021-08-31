@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Calculator</title>
+	<link href="css/calculator.css" rel="stylesheet" type="text/css" />
+</head>
+<script type="text/javascript">
+	function backspace(){
+		let s = document.getElementById('textarea').value;
+		document.getElementById('textarea').value = s.slice(0, -1);
+	}
+	function add(a){
+		document.getElementById('textarea').value+=a;
+	}
+	
+
+</script>
+<body>
+
+
+<div class="container">
+
+	<div class="displayarea">
+		<input type="textfield" id="textarea" name="textarea" value=""/>
+	</div>
+	<table>
+		<tr>
+			<td colspan="2"><button onClick="document.getElementById('textarea').value=''">Clear</button></td>
+			<td colspan="2"><button onClick="backspace()"><<</button></td>
+		</tr>
+		<tr>
+			<td><button onClick="add(7)">7</button></td>
+			<td><button onClick="add(8)">8</button></td>
+			<td><button onClick="add(9)">9</button></td>
+			<td><button onClick="add('/')">/</button></td>
+		</tr>
+		<tr>
+			<td><button onClick="add(4)">4</button></td>
+			<td><button onClick="add(5)">5</button></td>
+			<td><button onClick="add(6)">6</button></td>
+			<td><button onClick="add('*')">x</button></td>
+		</tr>
+		<tr>
+			<td><button onClick="add(1)">1</button></td>
+			<td><button onClick="add(2)">2</button></td>
+			<td><button onClick="add(3)">3</button></td>
+			<td><button onClick="add('-')">-</button></td>
+		</tr>
+		<tr>
+			<td><button onClick="add('.')">.</button></td>
+			<td><button onClick="add('0')">0</button></td>
+			<td><button onClick="document.getElementById('textarea').value=eval(document.getElementById('textarea').value)">=</button></td>
+			<td><button onClick="add('+')">+</button></td>
+		</tr>
+
+	</table>
+</div>
+
+
+
+</body>
+</html>
